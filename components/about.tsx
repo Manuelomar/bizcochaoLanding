@@ -13,10 +13,10 @@ export function About() {
     <section id="sobre" className="bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 md:grid-cols-2 md:px-8">
         <Reveal className="order-2 md:order-1">
-          <span className="inline-flex items-center rounded-full bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground">
-            Sobre Bizcochao
+          <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-primary">
+            NUESTRA HISTORIA
           </span>
-          <h2 className="mt-5 font-heading text-3xl font-semibold text-balance text-foreground md:text-4xl">
+          <h2 className="mt-5 font-heading text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl">
             Sabor, amor y creatividad en cada mesa
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
@@ -42,9 +42,9 @@ export function About() {
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
             <div
               aria-hidden="true"
-              className="absolute inset-0 rotate-3 rounded-[2.5rem] bg-muted"
+              className="absolute inset-0 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-primary/20 to-[#f4a261]/20 shadow-lg"
             />
-            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-xl ring-1 ring-border">
+            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-border/50">
               <Image
                 src="/images/about.png"
                 alt="Cocina artesanal de Bizcochao preparando postres"

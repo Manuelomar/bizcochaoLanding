@@ -8,22 +8,22 @@ import { WHATSAPP_LINK } from "@/lib/data"
 export function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden bg-background pt-10 md:pt-16">
-      {/* soft organic blobs */}
+      {/* modern vibrant blobs */}
       <div
         aria-hidden="true"
-        className="absolute -left-24 top-20 size-72 rounded-full bg-secondary/50 blur-3xl"
+        className="absolute -left-24 top-20 size-72 rounded-full bg-primary/10 blur-[80px]"
       />
       <div
         aria-hidden="true"
-        className="absolute -right-16 top-48 size-64 rounded-full bg-muted/60 blur-3xl"
+        className="absolute -right-16 top-48 size-64 rounded-full bg-[#f4a261]/20 blur-[80px]"
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-24 md:grid-cols-2 md:px-8 md:pb-32">
         <Reveal>
-          <span className="inline-flex items-center rounded-full bg-card px-4 py-1.5 text-sm font-medium text-primary shadow-sm ring-1 ring-border">
-            Repostería artesanal boutique
+          <span className="inline-flex items-center rounded-full bg-card px-4 py-1.5 text-sm font-bold tracking-wide text-primary shadow-sm">
+            REPOSTERÍA BOUTIQUE
           </span>
-          <h1 className="mt-5 font-heading text-4xl font-semibold leading-tight text-balance text-foreground md:text-6xl">
+          <h1 className="mt-6 font-heading text-5xl font-bold leading-tight text-balance text-foreground tracking-tight md:text-7xl">
             Postres artesanales hechos con{" "}
             <span className="italic text-primary">amor</span>
           </h1>
@@ -37,7 +37,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="border border-primary/20 bg-primary/15 text-primary hover:bg-primary/25"
+              className="rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 hover:bg-primary/90 hover:shadow-xl"
             >
               <MessageCircle className="size-5" />
               Ordenar ahora
@@ -46,7 +46,7 @@ export function Hero() {
               href="#menu"
               size="lg"
               variant="outline"
-              className="border border-secondary-foreground/15 bg-secondary/40 text-secondary-foreground hover:bg-secondary/60"
+              className="rounded-full border-2 border-primary/20 bg-transparent text-foreground transition-all hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md"
             >
               <UtensilsCrossed className="size-5" />
               Ver menú
@@ -58,9 +58,9 @@ export function Hero() {
           <div className="relative mx-auto aspect-square w-full max-w-md">
             <div
               aria-hidden="true"
-              className="absolute inset-0 -rotate-6 rounded-[2.5rem] bg-secondary"
+              className="absolute inset-0 -rotate-3 rounded-[2.5rem] bg-gradient-to-tr from-primary/20 to-[#f4a261]/20 shadow-lg"
             />
-            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-xl ring-1 ring-border">
+            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-border/50">
               <Image
                 src="/images/hero-cake.png"
                 alt="Pastel artesanal de Bizcochao decorado con fresas"

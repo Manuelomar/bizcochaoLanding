@@ -33,7 +33,7 @@ export function Header() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden border border-primary/20 bg-primary/15 px-5 py-2.5 text-sm text-primary hover:bg-primary/25 sm:inline-flex"
+            className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md sm:inline-flex"
           >
             <MessageCircle className="size-4" />
             Ordenar por WhatsApp
@@ -73,7 +73,7 @@ export function Header() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full border border-primary/20 bg-primary/15 text-primary hover:bg-primary/25"
+                className="w-full rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
               >
                 <MessageCircle className="size-4" />
                 Ordenar por WhatsApp

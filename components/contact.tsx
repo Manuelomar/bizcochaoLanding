@@ -23,7 +23,7 @@ export function Contact() {
       <Wave position="top" color="#FADADD" colorBack="#FADADD" />
       <div className="relative mx-auto max-w-5xl px-4 md:px-8">
         <Reveal className="text-center">
-          <h2 className="font-heading text-3xl font-semibold text-balance text-secondary-foreground md:text-4xl">
+          <h2 className="font-heading text-4xl font-bold tracking-tight text-balance text-secondary-foreground md:text-5xl">
             Haz tu pedido
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-secondary-foreground/80">
@@ -39,7 +39,7 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto"
+              className="w-full rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 hover:bg-primary/90 hover:shadow-xl sm:w-auto"
             >
               <MessageCircle className="size-5" />
               Ordenar por WhatsApp
@@ -50,7 +50,7 @@ export function Contact() {
               rel="noopener noreferrer"
               size="lg"
               variant="outline"
-              className="w-full rounded-full border-primary/30 bg-card text-primary hover:bg-muted sm:w-auto"
+              className="w-full rounded-full border-2 border-primary/20 bg-card text-foreground transition-all hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md sm:w-auto"
             >
               <Camera className="size-5" />
               Síguenos en Instagram
@@ -61,7 +61,7 @@ export function Contact() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {info.map((item, i) => (
             <Reveal key={item.title} delay={0.15 + i * 0.08}>
-              <div className="flex h-full items-start gap-4 rounded-3xl bg-card p-6 shadow-sm ring-1 ring-border">
+              <div className="flex h-full items-start gap-4 rounded-[2rem] bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-muted text-primary">
                   <item.icon className="size-5" />
                 </span>

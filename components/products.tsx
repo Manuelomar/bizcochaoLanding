@@ -15,7 +15,7 @@ export function Products() {
     <section id="productos" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl font-semibold text-balance text-foreground md:text-4xl">
+          <h2 className="font-heading text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl">
             Favoritos de nuestros clientes
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -26,7 +26,7 @@ export function Products() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, i) => (
             <Reveal key={product.name} delay={(i % 3) * 0.08}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={product.image || "/placeholder.svg"}
@@ -47,7 +47,7 @@ export function Products() {
                     href={orderLink(product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 w-full border border-primary/20 bg-primary/15 px-5 py-2.5 text-sm text-primary hover:bg-primary/25"
+                    className="mt-5 w-full rounded-full bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-md"
                   >
                     <MessageCircle className="size-4" />
                     Pedir

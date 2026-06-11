@@ -21,7 +21,7 @@ export function Events() {
       <Wave position="top" color="#FADADD" colorBack="#FADADD" />
       <div className="relative mx-auto max-w-5xl px-4 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-semibold text-balance text-accent-foreground md:text-4xl">
+          <h2 className="font-heading text-4xl font-bold tracking-tight text-balance text-accent-foreground md:text-5xl">
             Endulzamos tus eventos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-accent-foreground/80">
@@ -35,7 +35,7 @@ export function Events() {
             {benefits.map((b) => (
               <li
                 key={b}
-                className="flex items-center gap-3 rounded-2xl bg-card px-5 py-4 shadow-sm ring-1 ring-border"
+                className="flex items-center gap-3 rounded-2xl bg-card px-5 py-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Check className="size-4" />
@@ -52,7 +52,7 @@ export function Events() {
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            className="mt-10 border border-primary/20 bg-primary/15 text-primary hover:bg-primary/25"
+            className="mt-10 rounded-full bg-primary px-8 py-3 text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 hover:bg-primary/90 hover:shadow-xl"
           >
             <MessageCircle className="size-5" />
             Cotizar mi evento

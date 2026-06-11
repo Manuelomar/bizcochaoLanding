@@ -1,4 +1,5 @@
 import { MessageCircle, Camera, Clock, MapPin } from "lucide-react"
+import Image from "next/image"
 import { LinkButton } from "@/components/link-button"
 import { Reveal } from "@/components/reveal"
 import { Wave } from "@/components/wave"
@@ -58,26 +59,59 @@ export function Contact() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {info.map((item, i) => (
-            <Reveal key={item.title} delay={0.15 + i * 0.08}>
-              <div className="flex h-full items-start gap-4 rounded-[2rem] bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-muted text-primary">
-                  <item.icon className="size-5" />
-                </span>
-                <div>
-                  <h3 className="font-heading text-lg font-semibold text-foreground">
-                    {item.title}
-                  </h3>
-                  {item.lines.map((line) => (
-                    <p key={line} className="text-sm leading-relaxed text-muted-foreground">
-                      {line}
-                    </p>
-                  ))}
+        <div className="mt-12 flex flex-col gap-10">
+          {/* Tarjetas de Información */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {info.map((item, i) => (
+              <Reveal key={item.title} delay={0.15 + i * 0.08}>
+                <div className="flex h-full items-start gap-4 rounded-[2rem] bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-muted text-primary">
+                    <item.icon className="size-5" />
+                  </span>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold text-foreground">
+                      {item.title}
+                    </h3>
+                    {item.lines.map((line) => (
+                      <p key={line} className="text-sm leading-relaxed text-muted-foreground">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Tarjeta del Código QR de Instagram (Más grande y centrada) */}
+          <Reveal delay={0.3} className="mx-auto w-full max-w-md">
+            <div className="flex flex-col items-center justify-center rounded-[2.5rem] bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center group border border-primary/5">
+              <a
+                href={INSTAGRAM_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-6 w-full"
+              >
+                <div className="relative w-full max-w-[320px] aspect-square overflow-hidden rounded-[2rem] bg-white p-2 shadow-sm border border-border/50 transition-transform duration-500 group-hover:scale-105 group-hover:shadow-md">
+                  <Image
+                    src="/images/instagram-qr.png"
+                    alt="Instagram QR Code"
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-heading text-2xl font-bold text-foreground flex items-center justify-center gap-2 group-hover:text-primary transition-colors">
+                    <Camera className="size-6 text-primary" />
+                    @bizcochao
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-2 font-medium">
+                    Escanea para descubrir más delicias
+                  </p>
+                </div>
+              </a>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

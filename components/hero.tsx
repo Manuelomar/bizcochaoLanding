@@ -1,9 +1,9 @@
-import Image from "next/image"
 import { MessageCircle, UtensilsCrossed } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
 import { Reveal } from "@/components/reveal"
 import { Wave } from "@/components/wave"
 import { WHATSAPP_LINK } from "@/lib/data"
+import { InteractiveHeroImage } from "@/components/interactive-hero-image"
 
 export function Hero() {
   return (
@@ -55,22 +55,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.15} className="relative">
-          <div className="relative mx-auto aspect-square w-full max-w-md">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -rotate-3 rounded-[2.5rem] bg-gradient-to-tr from-primary/20 to-[#f4a261]/20 shadow-lg"
-            />
-            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-border/50">
-              <Image
-                src="/images/hero-cake.png"
-                alt="Pastel artesanal de Bizcochao decorado con fresas"
-                fill
-                priority
-                sizes="(max-width: 768px) 90vw, 40vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
+          <InteractiveHeroImage />
         </Reveal>
       </div>
 

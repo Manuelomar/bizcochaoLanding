@@ -3,7 +3,7 @@ import { LinkButton } from "@/components/link-button"
 import { Reveal } from "@/components/reveal"
 import { Wave } from "@/components/wave"
 import { WHATSAPP_LINK } from "@/lib/data"
-import { InteractiveHeroImage } from "@/components/interactive-hero-image"
+import { InteractiveImage } from "@/components/interactive-image"
 
 export function Hero() {
   return (
@@ -55,7 +55,12 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.15} className="relative">
-          <InteractiveHeroImage />
+          <InteractiveImage 
+            img1="/images/hero-cake.png"
+            img2="/images/about.png"
+            alt1="Pastel artesanal de Bizcochao decorado con fresas"
+            alt2="Postre de Bizcochao"
+          />
         </Reveal>
       </div>
 

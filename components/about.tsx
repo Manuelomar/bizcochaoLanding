@@ -1,6 +1,6 @@
-import Image from "next/image"
 import { Heart, Sparkles, Home } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { InteractiveImage } from "@/components/interactive-image"
 
 const values = [
   { icon: Heart, label: "Hecho con amor" },
@@ -39,21 +39,15 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.15} className="order-1 md:order-2">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-primary/20 to-[#f4a261]/20 shadow-lg"
-            />
-            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-border/50">
-              <Image
-                src="/images/about.png"
-                alt="Cocina artesanal de Bizcochao preparando postres"
-                fill
-                sizes="(max-width: 768px) 90vw, 40vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
+          <InteractiveImage
+            img1="/images/about.png"
+            img2="/images/hero-cake.png"
+            alt1="Cocina artesanal de Bizcochao preparando postres"
+            alt2="Pastel de Bizcochao"
+            aspectRatioClassName="aspect-[4/5]"
+            decorationClassName="absolute inset-0 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-primary/20 to-[#f4a261]/20 shadow-lg"
+            rotateOnHover={5}
+          />
         </Reveal>
       </div>
     </section>
